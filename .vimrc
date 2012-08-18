@@ -175,9 +175,12 @@ endf
 nmap <leader>gg :call GitGrepWord()<CR>
 
 " Settings for VimClojure
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
+"let vimclojure#HighlightBuiltins=1
+"let vimclojure#ParenRainbow=1
 
 autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
 autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
 autocmd BufRead,BufNewFile *.html setlocal foldmethod=indent
+
+let g:slimv_swank_clojure = '! xterm -e lein_swank.sh &'
+let g:lisp_rainbow=1

@@ -228,9 +228,29 @@ syn region clojureSexpLevel8 matchgroup=clojureParen8 start="(" matchgroup=cloju
 syn region clojureSexpLevel9 matchgroup=clojureParen9 start="(" matchgroup=clojureParen9 end=")" contained contains=@clojureTopCluster,clojureSexpLevel0
 
 syn region  clojureAnonFn  matchgroup=clojureParen0 start="#(" matchgroup=clojureParen0 end=")"  contains=@clojureTopCluster,clojureAnonArg,clojureSexpLevel0
-syn region  clojureVector  matchgroup=clojureParen0 start="\[" matchgroup=clojureParen0 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureSexpLevel0
-syn region  clojureMap     matchgroup=clojureParen0 start="{"  matchgroup=clojureParen0 end="}"  contains=@clojureTopCluster,clojureSexpLevel0
 syn region  clojureSet     matchgroup=clojureParen0 start="#{" matchgroup=clojureParen0 end="}"  contains=@clojureTopCluster,clojureSexpLevel0
+
+syn region  clojureMap           matchgroup=clojureParen0 start="{" matchgroup=clojureParen0 end="}"           contains=@clojureTopCluster,clojureMapLevel1
+syn region  clojureMapLevel1     matchgroup=clojureParen1 start="{" matchgroup=clojureParen1 end="}" contained contains=@clojureTopCluster,clojureMapLevel2
+syn region  clojureMapLevel2     matchgroup=clojureParen2 start="{" matchgroup=clojureParen2 end="}" contained contains=@clojureTopCluster,clojureMapLevel3
+syn region  clojureMapLevel3     matchgroup=clojureParen3 start="{" matchgroup=clojureParen3 end="}" contained contains=@clojureTopCluster,clojureMapLevel4
+syn region  clojureMapLevel4     matchgroup=clojureParen4 start="{" matchgroup=clojureParen4 end="}" contained contains=@clojureTopCluster,clojureMapLevel5
+syn region  clojureMapLevel5     matchgroup=clojureParen5 start="{" matchgroup=clojureParen5 end="}" contained contains=@clojureTopCluster,clojureMapLevel6
+syn region  clojureMapLevel6     matchgroup=clojureParen6 start="{" matchgroup=clojureParen6 end="}" contained contains=@clojureTopCluster,clojureMapLevel7
+syn region  clojureMapLevel7     matchgroup=clojureParen7 start="{" matchgroup=clojureParen7 end="}" contained contains=@clojureTopCluster,clojureMapLevel8
+syn region  clojureMapLevel8     matchgroup=clojureParen8 start="{" matchgroup=clojureParen8 end="}" contained contains=@clojureTopCluster,clojureMapLevel9
+syn region  clojureMapLevel9     matchgroup=clojureParen9 start="{" matchgroup=clojureParen9 end="}" contained contains=@clojureTopCluster,clojureMap
+
+syn region  clojureVector  matchgroup=clojureParen0 start="\[" matchgroup=clojureParen0 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel1
+syn region  clojureVectorLevel1  matchgroup=clojureParen1 start="\[" matchgroup=clojureParen1 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel2
+syn region  clojureVectorLevel2  matchgroup=clojureParen2 start="\[" matchgroup=clojureParen2 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel3
+syn region  clojureVectorLevel3  matchgroup=clojureParen3 start="\[" matchgroup=clojureParen3 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel4
+syn region  clojureVectorLevel4  matchgroup=clojureParen4 start="\[" matchgroup=clojureParen4 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel5
+syn region  clojureVectorLevel5  matchgroup=clojureParen5 start="\[" matchgroup=clojureParen5 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel6
+syn region  clojureVectorLevel6  matchgroup=clojureParen6 start="\[" matchgroup=clojureParen6 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel7
+syn region  clojureVectorLevel7  matchgroup=clojureParen7 start="\[" matchgroup=clojureParen7 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel8
+syn region  clojureVectorLevel8  matchgroup=clojureParen8 start="\[" matchgroup=clojureParen8 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel9
+syn region  clojureVectorLevel9  matchgroup=clojureParen9 start="\[" matchgroup=clojureParen9 end="\]" contains=@clojureTopCluster,clojureVarArg,clojureVectorLevel0
 
 syn region  clojurePattern start=/L\=\#"/ skip=/\\\\\|\\"/ end=/"/
 

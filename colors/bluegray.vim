@@ -65,6 +65,19 @@ endif
 :hi def hlLevel8  guifg=#0f0
 :hi def hlLevel9  guifg=#00f
 
+" ClojureVim
+:hi clojureKeyword guifg=salmon ctermfg=red
+
+:hi def clojureParen0  guifg=#f00
+:hi def clojureParen1  guifg=#66e
+:hi def clojureParen2  guifg=#e66
+:hi def clojureParen3  guifg=#6f6
+:hi def clojureParen4  guifg=#ee6
+:hi def clojureParen5  guifg=#6ee
+:hi def clojureParen6  guifg=#e6e
+:hi def clojureParen7  guifg=#ff0
+:hi def clojureParen8  guifg=#0f0
+:hi def clojureParen9  guifg=#00f
 "phpOperator
 "phpVarSelector
 "phpInclude

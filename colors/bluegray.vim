@@ -54,6 +54,17 @@ endif
 :hi Error guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 :hi SpellErrors guifg=White guibg=Red cterm=bold ctermfg=7 ctermbg=1
 
+:hi def hlLevel0  guifg=#f00
+:hi def hlLevel1  guifg=#66e
+:hi def hlLevel2  guifg=#e66
+:hi def hlLevel3  guifg=#6f6
+:hi def hlLevel4  guifg=#ee6
+:hi def hlLevel5  guifg=#6ee
+:hi def hlLevel6  guifg=#e6e
+:hi def hlLevel7  guifg=#ff0
+:hi def hlLevel8  guifg=#0f0
+:hi def hlLevel9  guifg=#00f
+
 "phpOperator
 "phpVarSelector
 "phpInclude

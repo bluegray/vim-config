@@ -157,6 +157,14 @@ autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn set com=s1:/*,mb
 autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn set com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,b:+
 autocmd BufNewFile,BufRead *.markdown,*.md,*.mdown,*.mkd,*.mkdn set formatoptions=tcroqln
 
+function RebaseActionToggle()
+    let line = getline(".")
+    let result = matchstr(line, "^\\a")
+    let transitions = {'p': 'fixup', 'f': 'squash', 's': 'edit', 'e': 'pick'}
+    execute "normal! ^cw" . transitions[result]
+    execute "normal! ^"
+endfunction
+noremap <Cr> :call RebaseActionToggle()<Cr>
 
 "From http://stackoverflow.com/questions/2415237/techniques-in-git-grep-and-vim
 func GitGrep(...)

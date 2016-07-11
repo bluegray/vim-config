@@ -30,7 +30,7 @@ set directory=~/.vim/_temp//      " where to put swap files.
 setlocal spell spelllang=en_us
 colorscheme bluegray
 
-set guifont=Consolas\ 10
+set guifont=Ubuntu\ Mono\ 10
 
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'active_filetypes': ['ruby', 'php', 'python'],
